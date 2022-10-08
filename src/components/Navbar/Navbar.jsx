@@ -9,7 +9,7 @@ import logo from '../../assets/commercelogo.png';
 
 const drawerWidth = 0;
 
-const Navbar = () => {
+const Navbar = ({ totalItems }) => {
   return (
     <div>
       <AppBar
@@ -29,7 +29,7 @@ const Navbar = () => {
           <div className="grow" />
           <div className="button" spacing={2} sm={{ display: 'none' }}>
             <IconButton aria-label="Show cart items" color="inherit">
-              <Badge badgeContent={2} color="secondary">
+              <Badge badgeContent={totalItems} color="secondary">
                 <ShoppingCart />
               </Badge>
             </IconButton>
