@@ -1,0 +1,27 @@
+.toolbar {
+    margin-top: 10%;
+}
+
+.cartDetail {
+    display: flex;
+    margin-top: 10%;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.emptyButton {
+    min-width: 150px;
+    margin: 5px !important;
+}
+
+.checkoutButton {
+    min-width: 150px;
+}
+
+.title {
+    margin-top: 5%;
+}
+
+.link {
+    text-decoration: none;
+}
