@@ -2,6 +2,7 @@
 /* eslint-disable arrow-body-style */
 import React from 'react';
 import './style.css';
+import { Link } from 'react-router-dom';
 import { Container, Typography, Button, Grid } from '@mui/material';
 import { CartItem } from './CartItem/CartItem';
 
@@ -9,7 +10,13 @@ const Cart = ({ cart }) => {
   const isEmpty = !(cart?.line_items?.length || 0);
 
   const EmptyCart = () => (// is a component but must be placed outside of this component
-    <Typography variant="subtitle1">You have no items in your shopping cart, start adding some!</Typography>
+    <Typography variant="subtitle1">
+      You have no items in your shopping cart,
+      <Link to="/" className="link">
+        start adding some
+      </Link>
+      !
+    </Typography>
   );
 
   const FilledCart = () => (
