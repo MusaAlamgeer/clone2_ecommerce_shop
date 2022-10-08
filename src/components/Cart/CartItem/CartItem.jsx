@@ -4,7 +4,7 @@ import React from 'react';
 import './style.css';
 import { Typography, Button, Card, CardActions, CardContent, CardMedia } from '@mui/material';
 
-export const CartItem = ({ item }) => {
+export const CartItem = ({ item, handleUpdateCartQty, handleRemoveFromCart }) => {
   return (
     <Card>
       <CardMedia
@@ -18,11 +18,11 @@ export const CartItem = ({ item }) => {
       </CardContent>
       <CardActions className="cardActions">
         <div className="buttons">
-          <Button type="button" size="small">-</Button>
+          <Button type="button" size="small" onClick={() => handleUpdateCartQty(item.id, item.quantity - 1)}>-</Button>
           <Typography>{item.quantity}</Typography>
-          <Button type="button" size="small">+</Button>
+          <Button type="button" size="small" onClick={() => handleUpdateCartQty(item.id, item.quantity + 1)}>+</Button>
         </div>
-        <Button variant="contained" type="button" color="secondary">Remove</Button>
+        <Button variant="contained" type="button" color="secondary" onClick={() => handleRemoveFromCart(item.id)}>Remove</Button>
       </CardActions>
     </Card>
   );
