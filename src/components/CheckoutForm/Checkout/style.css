@@ -1,0 +1,44 @@
+.toolbar {
+    margin-top: 10%;
+}
+
+.appBar {
+    position: relative;
+}
+
+.layout {
+    margin-top: 5%;
+    width: auto;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.paper {
+    margin-top: 15px;
+    margin-bottom: 15px;
+    padding: 10px;
+}
+
+.stepper {
+    padding: 20px;
+}
+
+.buttons {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.button {
+    margin-top: 15px;
+    margin-left: 5px;
+}
+
+.divider {
+    margin: 20px 0;
+}
+
+.spinner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
